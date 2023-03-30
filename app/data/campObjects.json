@@ -1,0 +1,75 @@
+{
+    "CampObjects":[
+        {
+            "product":"CLIQ Portable Chair Camping Chairs",
+            "price":"$98.99",
+            "distributor":"CLIQ",
+            "type":"Furniture",
+            "image":"assets/images/camping/portableChair.jpg"
+        },
+        {
+            "product":"MARBERO Portable Power Station",
+            "price":"$98.99",
+            "distributor":"MARBERO",
+            "type":"Battery",
+            "image":"assets/images/camping/powerStation.jpg"
+        },
+        {
+            "product":"Etekcity Camping Lantern",
+            "price":"$14.44",
+            "distributor":"Etekcity",
+            "type":"Lighting",
+            "image":"assets/images/camping/lamp.jpg"
+        },
+        {
+            "product":"Stanley Adventure Camp Cook Set",
+            "price":"$17.27",
+            "distributor":"Stanley",
+            "type":"Cooking",
+            "image":"assets/images/camping/campCookSet.jpg"
+        },
+        {
+            "product":"Suscell Solar Charger",
+            "price":"$19.18",
+            "distributor":"Suscell",
+            "type":"Battery/Lighting",
+            "image":"assets/images/camping/powerBank.jpg"
+        },
+        {
+            "product":"deftget 163 Pieces First Aid Kit",
+            "price":"$13.90",
+            "distributor":"deftget",
+            "type":"First Aid",
+            "image":"assets/images/camping/firstAid.jpg"
+        },
+        {
+            "product":"MEREZA Double Sleeping Bag",
+            "price":"$59.49",
+            "distributor":"MEREZA",
+            "type":"Shelter",
+            "image":"assets/images/camping/sleepingBag.jpg"
+        },
+        {
+            "product":"Xpose Safety 10 Pack Heavy Duty Reusable Tarp Clips",
+            "price":"$12.99",
+            "distributor":"Xpose",
+            "type":"Equipment",
+            "image":"assets/images/camping/tarpClips.jpg"
+        },
+        {
+            "product":"GearLight LED Head Lamp",
+            "price":"$10.94",
+            "distributor":"GearLight",
+            "type":"Lighting/Equipment",
+            "image":"assets/images/camping/headLamp.jpg"
+        },
+        {
+            "product":"Gas One GS-3400P Propane/Butane Stove",
+            "price":"$35.01",
+            "distributor":"Gas One",
+            "type":"Cooking",
+            "image":"assets/images/camping/cookSet.jpg"
+        }
+    ]
+
+}

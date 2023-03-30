@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" style="background-image: url('assets/images/recipesBanner.png') !important; background-size: cover;">
+    <head>
+        <script src="app/packages/jQuery.js"></script>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title style="text-transform: capitalize;">Main Page</title>
+        <link rel="stylesheet" href="styles/styles.css" />
+    </head>
+    <body>
+        <div class="green-overlay"></div>
+        <div class="ssContainer">
+            <nav>
+                <div id="logo">
+                    <img id="logoImage" src="assets/images/logo.png" />
+                    <!-- <h2>The Jungle Cook</h2> -->
+                </div>
+                <div id="navLinks">
+                    <a href="#HOME" class="navBtn">Home</a>
+                    <a href="#BROWSE" class="navBtn">Browse</a>
+                    <a href="#CREATE" class="navBtn">Create Recipe</a>
+                    <div class="submitBtn" style="width: 7vw !important;margin: 0;">
+                        <a href="#" style="text-align: center !important;font-size: 1vw;">Logout</a>
+                    </div>
+                    <!-- <a href="#YOURRECIPE" class="navBtn">Create Recipe</a>
+                    <a href="#LOGOUT" class="navBtn">Logout</a> -->
+                    <img id="hamburger" src="assets/images/hamburgerBtn.png" />
+                    <div id="mainMenu">
+                        <div style="padding: 1rem;">
+                            <a href="#HOME" class="menuBtn">Home</a>
+                            <a href="#BROWSE" class="navBtn">Browse</a>
+                            <a href="#CREATE" class="navBtn">Create Recipe</a>
+                            <a href="#LOGIN" class="navBtn">Login</a>
+                            <!-- <a href="#YOURRECIPE" class="navBtn">Create Recipe</a>
+                            <a href="#LOGOUT" class="navBtn">Logout</a> -->
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+            <div id="mainContainer">
+                <div id="yourRecipeContainer">
+                    <h1 style="margin: 2rem 3rem;">Hey ${username}, here are your recipes!</h1>
+                    <div id="recipeSection" class="yourRecipeSection">
+                        <div id="recipeImage" class="yourRecipeImage">
+                            <img src="assets/images/recipes/recipe-pizza.png" />
+                        </div>
+                        <div id="recipeText">
+                            <h2>Supreme Pizza</h2>
+                            <p>
+                                Make pizza night super duper out of this world with homemade pizza. This recipe is supreme with vegetables and two types of meat. Yum!
+                            </p>
+                            <div class="image-content">
+                                <div>
+                                    <svg id="time" xmlns="http://www.w3.org/2000/svg" width="22.114" height="23.519" viewBox="0 0 22.114 23.519">
+                                        <path id="Path_1" data-name="Path 1" d="M29.3,28.268A1.4,1.4,0,0,0,30.32,27.7l3.67-5.074a.392.392,0,0,0-.548-.548l-5.075,3.671a1.4,1.4,0,0,0,.821,2.526C29.225,28.272,29.262,28.271,29.3,28.268Zm-.72-1.44a.612.612,0,0,1,.25-.448l3.1-2.239-2.239,3.095a.613.613,0,0,1-1.107-.408Z" transform="translate(-17.601 -13.376)"/>
+                                        <path id="Path_2" data-name="Path 2" d="M35.647,7.669c0-.008,0-.017-.008-.025s-.012-.012-.017-.02a10.657,10.657,0,0,0-1.4-1.885l.842-.842.554.554,1.663-1.663L35.62,2.126,33.957,3.789l.555.555-.842.842a10.644,10.644,0,0,0-1.885-1.4c-.007-.005-.012-.013-.02-.017s-.017,0-.025-.009a10.509,10.509,0,0,0-4.027-1.334V1.96H28.3A.98.98,0,1,0,28.3,0H24.773a.98.98,0,0,0,0,1.96h.588v.453a10.782,10.782,0,0,0-1.264.21.392.392,0,1,0,.175.764,9.969,9.969,0,0,1,1.09-.187l.421-.033c.129-.01.247-.017.362-.022V3.92a.392.392,0,1,0,.784,0V3.148a9.723,9.723,0,0,1,4.1,1.115l-.387.669a.392.392,0,1,0,.679.392l.385-.668A9.876,9.876,0,0,1,34.751,7.7l-.668.385a.392.392,0,0,0,.393.679l.669-.387a9.729,9.729,0,0,1,1.117,4.163h-.774a.392.392,0,0,0,0,.784h.774a9.729,9.729,0,0,1-1.117,4.163l-.669-.387a.392.392,0,1,0-.392.679l.668.385a9.876,9.876,0,0,1-3.047,3.047l-.385-.668a.392.392,0,1,0-.679.392l.386.669a9.723,9.723,0,0,1-4.1,1.115v-.771a.392.392,0,1,0-.784,0v.775a9.892,9.892,0,0,1-1.872-.242.392.392,0,0,0-.175.764,10.592,10.592,0,0,0,2.375.271l.057,0,.007,0,.009,0a10.515,10.515,0,0,0,5.182-1.4.332.332,0,0,0,.037-.015c.008,0,.012-.012.02-.017a10.661,10.661,0,0,0,3.831-3.826.373.373,0,0,0,.024-.031c0-.008,0-.017.008-.025a10.543,10.543,0,0,0,0-10.534ZM35.62,3.234l.554.554-.554.555-.555-.555ZM26.145,2.36V1.176H24.773a.2.2,0,0,1,0-.392H28.3a.2.2,0,1,1,0,.392H26.929V2.36c-.136-.005-.267-.008-.392-.008h-.064c-.064,0-.129,0-.193.005C26.234,2.359,26.192,2.358,26.145,2.36Z" transform="translate(-15.169)"/>
+                                        <path id="Path_3" data-name="Path 3" d="M18.145,14h-1.96a.392.392,0,1,0,0,.784h1.96a.392.392,0,0,0,0-.784Z" transform="translate(-10.305 -8.512)"/>
+                                        <path id="Path_4" data-name="Path 4" d="M15.1,21h-3.92a.392.392,0,1,0,0,.784H15.1a.392.392,0,1,0,0-.784Z" transform="translate(-7.265 -12.768)"/>
+                                        <path id="Path_5" data-name="Path 5" d="M12.065,28H6.185a.392.392,0,1,0,0,.784h5.88a.392.392,0,1,0,0-.784Z" transform="translate(-4.225 -17.024)"/>
+                                        <path id="Path_6" data-name="Path 6" d="M9.633,35H2.185a.392.392,0,0,0,0,.784H9.633a.392.392,0,0,0,0-.784Z" transform="translate(-1.793 -21.28)"/>
+                                        <path id="Path_7" data-name="Path 7" d="M13.281,42h-5.1a.392.392,0,1,0,0,.784h5.1a.392.392,0,1,0,0-.784Z" transform="translate(-5.441 -25.536)"/>
+                                        <path id="Path_8" data-name="Path 8" d="M16.929,49H14.185a.392.392,0,0,0,0,.784h2.744a.392.392,0,0,0,0-.784Z" transform="translate(-9.089 -29.792)"/>
+                                    </svg>      
+                                </div>            
+                                <div>
+                                    ${hours}h ${minutes}min
+                                </div>            
+                            </div>
+                            <div class="image-content">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22.529" height="20.69" viewBox="0 0 22.529 20.69">
+                                        <path id="servings" d="M21.567,10.574h-.782a9.445,9.445,0,0,0-.864-3.416.33.33,0,1,0-.6.278,8.792,8.792,0,0,1,.8,3.138H5.029a.329.329,0,1,0,0,.659H21.567a.3.3,0,0,1,.3.3v.4a.3.3,0,0,1-.3.3H.961a.3.3,0,0,1-.3-.3v-.4a.3.3,0,0,1,.3-.3H3.493a.329.329,0,1,0,0-.659H2.4a8.88,8.88,0,0,1,8.268-8.263h0q.135-.009.266-.014l.052,0,.093,0,.178,0c.079,0,.157,0,.236,0l.07,0,.181.008.1.006a8.887,8.887,0,0,1,6.744,3.841.33.33,0,0,0,.543-.373,9.547,9.547,0,0,0-6.519-4.049,1.6,1.6,0,0,0,.257-.87c0-.179-.08-.509-.615-.706a3.3,3.3,0,0,0-1.985,0c-.535.2-.615.527-.615.706a1.607,1.607,0,0,0,.255.868,9.542,9.542,0,0,0-8.169,8.847H.961A.963.963,0,0,0,0,11.535v.4a.962.962,0,0,0,.961.961h3.55a4.084,4.084,0,0,0-.506.409L4,13.313a.3.3,0,0,0-.029.03l-1.565,1.9a.909.909,0,0,0-1.24.257l-.615.907a.912.912,0,0,0,.242,1.264L5,20.533a.9.9,0,0,0,.51.158.925.925,0,0,0,.173-.017.9.9,0,0,0,.582-.383l.615-.907a.912.912,0,0,0-.242-1.264L6.617,18.1a2.131,2.131,0,0,1,1.109-.669,7.243,7.243,0,0,1,2.664.045,6.3,6.3,0,0,0,2.686-.145L14.29,17A6.247,6.247,0,0,0,16.5,15.88l.015-.012L18.6,14.022a1.017,1.017,0,0,0,.31-1.124h2.658a.962.962,0,0,0,.961-.961v-.4A.962.962,0,0,0,21.567,10.574ZM11.264.659a1.544,1.544,0,0,1,.948.214.949.949,0,0,1-.42.774L11.6,1.638l-.064,0c-.092,0-.183,0-.272,0l-.192,0-.094,0-.113,0-.129.006a.949.949,0,0,1-.42-.774A1.544,1.544,0,0,1,11.264.659Zm2.363,12.4a1.087,1.087,0,0,0-.087-.159H16.7l-1.367.9-1.948.564-.066,0A1.121,1.121,0,0,0,13.628,13.058ZM10.054,12.9l-.476.1-.368-.1ZM6.337,19.013l-.615.907a.251.251,0,0,1-.349.067l-4.211-2.86a.251.251,0,0,1-.067-.349l.615-.908a.249.249,0,0,1,.161-.106.251.251,0,0,1,.048,0,.249.249,0,0,1,.141.044l.227.154h0l3.983,2.706A.251.251,0,0,1,6.337,19.013ZM18.195,13.5l-.023.018-2.086,1.847a5.593,5.593,0,0,1-1.972,1L12.9,16.7a5.627,5.627,0,0,1-2.4.13,7.846,7.846,0,0,0-2.921-.036,2.8,2.8,0,0,0-1.508.939L2.954,15.615l1.512-1.836a3.1,3.1,0,0,1,1.991-.88h.013a2.484,2.484,0,0,1,.684.127l.145.04,2.182.589a.329.329,0,0,0,.153,0l2.858-.6a.491.491,0,0,1,.373.073.442.442,0,0,1,.157.188.461.461,0,0,1-.213.6l-.975.516a.33.33,0,0,0,.161.621l1.446-.031a.332.332,0,0,0,.084-.013l2.038-.59a.33.33,0,0,0,.09-.042l2.056-1.361c.173-.107.4-.194.524-.014A.392.392,0,0,1,18.195,13.5Zm0,0" transform="translate(0 0)"/>
+                                    </svg>                                       
+                                </div>            
+                                <div>
+                                    ${servings} servings
+                                </div>            
+                            </div>
+                        </div>
+                    </div>
+                    <div id="yourRecipeBtnSection">
+                        <div class="submitBtn customBtn1">
+                            <a href="#">Edit Recipe</a>
+                        </div>
+                        <div class="submitBtn customBtn1">
+                            <a href="#">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </body>
+    <footer>
+        <div id="socials-copyright">
+            <div id="copyright">
+                <p id="cpInfo">
+                    Copyright 2019 The Jungle Cook
+                </p>
+            </div>
+            <div id="socials">
+                <div>
+                    <img src="assets/images/socials/fbLogo.png" />
+                </div>
+                <div>
+                    <img src="assets/images/socials/instagramLogo.png" />
+                </div> 
+            </div> 
+        </div>
+        <div id="links">
+            <div>
+                <a href="login.html" id="loginFooter">
+                    Login
+                </a>
+            </div>
+            <div>
+                <a href="login.html" id="loginFooter">
+                    Recipes by Category
+                </a>
+            </div> 
+            <div>
+                <a href="login.html" id="loginFooter">
+                    Privacy and Copyright
+                </a>
+            </div> 
+            <div>
+                <a href="login.html" id="loginFooter">
+                    Create Recipe
+                </a>
+            </div> 
+            <div>
+                <a href="login.html" id="loginFooter">
+                    Your Recipes
+                </a>
+            </div>
+        </div>
+    </footer>
+</html>
+<script type="module" src="app/module/app-module.js"></script>
+
+
+

@@ -1,0 +1,75 @@
+{
+    "GameObjects":[
+        {
+            "title":"Monster Hunter Rise",
+            "publisher":"Capcom",
+            "genre":"Fighting",
+            "platforms":"Switch/PS4/XBOX/PC",
+            "image":"assets/images/mhrise.jpg"
+        },
+        {
+            "title":"Super Smash Bros. Ultimate",
+            "publisher":"Nintendo",
+            "genre":"Fighting",
+            "platforms":"Switch",
+            "image":"assets/images/ssbu.jpg"
+        },
+        {
+            "title":"Monster Hunter Generations Ultimate",
+            "publisher":"Capcom",
+            "genre":"Fighting",
+            "platforms":"Switch",
+            "image":"assets/images/mhgu.jpg"
+        },
+        {
+            "title":"Super Mario Odyssey",
+            "publisher":"Nintendo",
+            "genre":"Platformer",
+            "platforms":"Switch",
+            "image":"assets/images/smo.jpg"
+        },
+        {
+            "title":"Legend of Zelda: Breath of the Wild",
+            "publisher":"Nintendo",
+            "genre":"Adventure/Puzzle",
+            "platforms":"Switch",
+            "image":"assets/images/lozbotw.jpg"
+        },
+        {
+            "title":"Metroid Prime Remastered",
+            "publisher":"Nintendo",
+            "genre":"Adventure",
+            "platforms":"Switch",
+            "image":"assets/images/mpr.jpg"
+        },
+        {
+            "title":"Super Mario Kart 8 Deluxe",
+            "publisher":"Nintendo",
+            "genre":"Racing",
+            "platforms":"Switch",
+            "image":"assets/images/smk8d.jpg"
+        },
+        {
+            "title":"Monster Hunter World",
+            "publisher":"Capcom",
+            "genre":"Fighting",
+            "platforms":"PS4/XBOX/PC",
+            "image":"assets/images/mhworld.jpg"
+        },
+        {
+            "title":"Bloodborne",
+            "publisher":"FromSoftware",
+            "genre":"RPG",
+            "platforms":"PS4",
+            "image":"assets/images/bb.jpg"
+        },
+        {
+            "title":"Pokemon Shield",
+            "publisher":"Nintendo",
+            "genre":"RPG",
+            "platforms":"Switch",
+            "image":"assets/images/ps.jpg"
+        }
+    ]
+
+}

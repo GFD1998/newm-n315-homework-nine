@@ -1,0 +1,109 @@
+
+
+#aboutMainSection{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-top: 10vw;
+    width: 65vw;
+    font-weight: 400;
+}
+
+#aboutMainSection div{
+    margin: 1vw;
+}
+
+#aboutMainSection div p{
+    font-size: 1.25vw;
+}
+
+#aboutSection1{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: left;
+    padding: 3vw 1vw;
+}
+
+#aboutSection1 h1{
+    font-size: 3vw;
+    width: fit-content;
+    font-weight: 400;
+}
+
+#aboutSection2{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: left;
+    padding: 3vw 1vw;
+}
+
+#aboutSection2 h1{
+    font-size: 3vw;
+    width: fit-content;
+    font-weight: 200;
+}
+
+.quote{
+}
+
+.quoteContent{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.quoteContent div p{
+    font-size: 1.25vw;
+    font-weight: 700;
+}
+
+.quoteContent img{
+    width: 100%;
+}
+
+.quoteContent div{
+    position: relative;
+    width: 100%;
+}
+
+#aboutH1Underline{
+    display: block;
+    position: relative;
+    width: 4vw;
+    border-bottom: 1px #000 solid;
+}
+
+#aboutH2Underline{
+    display: block;
+    position: relative;
+    width: 9vw;
+    border-bottom: 1px #000 solid;
+}
+
+.user{
+    display: block;
+    position: absolute !important;
+    width: 100%;
+    right:0;
+    bottom:0;
+    text-align: right;
+}
+
+.user p{
+    font-weight: 400 !important;
+    color: #79ADDC;
+}
+
+
+@media only screen and (max-width: 1000px){
+    #aboutMainSection{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-top: 30vw;
+        width: 90vw;
+        font-weight: 400;
+    }
+}
