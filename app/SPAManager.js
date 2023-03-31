@@ -169,6 +169,25 @@ export default class SPAManager{
         }
     }
 
+    createAccount(){
+        let fName = $("#fName").val();
+        let lName = $("#lName").val();
+        let email = $("#createEmail").val();
+        let password = $("#createPassword").val();
+        this._model.createNewAccount(fName, lName, email, password);
+    }
+
+
+    login(){
+        let email = $("#loginEmail").val();
+        let password = $("#loginPassword").val();
+        this._model.loginUser(email, password);
+    }
+
+    logout(){
+        this._model.logoutUser();
+    }
+
 
 
     updateView(){
@@ -196,22 +215,20 @@ export default class SPAManager{
                 case "#HOME":
                     this.homeContent();
                     break;
-                case "#CREATE":
-                    this.createContent();
+                case "#BROWSE":
+                    this.browseRecipesContent();
                     break;
-                case "#EDIT":
-                    this.editContent();
+                case "#CREATE":
+                    this.createRecipesContent();
+                    break;
+                case "#YOURRECIPE":
+                    this.yourRecipesContent();
                     break;
                 case "#LOGIN":
-                    this.loginSignupContent();
+                    this.loginCreateAccountContent();
                     break;
-                case "#SIGNUP":
-                    this.loginSignupContent();
-                    break;
-                case "#DETAILS":
-                    console.log($("#galleryImage").attr("src").split("/")[3].split(".")[0]);
-                    this.detailsPage($("#galleryImage").attr("src").split("/")[3].split(".")[0]);
-                    break;
+                case "#LOGOUT":
+                    this.logout();
                 default:
                     break;
             }

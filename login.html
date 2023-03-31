@@ -30,9 +30,13 @@
                             <a href="#HOME" class="menuBtn">Home</a>
                             <a href="#BROWSE" class="navBtn">Browse</a>
                             <a href="#CREATE" class="navBtn">Create Recipe</a>
-                            <a href="#LOGIN" class="navBtn">Login</a>
-                            <!-- <a href="#YOURRECIPE" class="navBtn">Create Recipe</a>
-                            <a href="#LOGOUT" class="navBtn">Logout</a> -->
+                            <a href="#YOURRECIPE" class="navBtn">Your Recipes</a>
+                            <div class="submitBtn" id="login" style="width: 7vw !important;margin: 0;width:fit-content !important;">
+                                <a href="#LOGIN" style="text-align: center !important;font-size: 1vw;">Login</a>
+                            </div>
+                            <div class="submitBtn" id="logout" style="width: 7vw !important;margin: 0;width:fit-content !important;">
+                                <a href="#LOGIN" style="text-align: center !important;font-size: 1vw;">Logout</a>
+                            </div>
                         </div>
                     </div> 
                 </div>
@@ -42,30 +46,30 @@
                     <div id="loginArea">
                         <h1>Login Here!</h1>
                         <div class="loginInput">
-                            <input type="text" name="email" style="border-bottom: 2px solid black;"  placeholder="Email Address" />
+                            <input type="text" id="loginEmail" style="border-bottom: 2px solid black;"  placeholder="Email Address" />
                         </div>
                         <div class="loginInput">
-                            <input type="password" name="password" style="border-bottom: 2px solid black;" placeholder="Password" />
+                            <input type="password" id="loginPassword" style="border-bottom: 2px solid black;" placeholder="Password" />
                         </div>
-                        <div class="submitBtn">
+                        <div onclick="spa.login()" class="submitBtn">
                             <a href="#">Login</a>
                         </div>
                     </div>
                     <div id="createAccountArea">
                         <h1><span id="createAccountCaption">don't have an account?</span><br>Sign Up!</h1>
                         <div class="loginInput">
-                            <input type="text" name="fName" style="border-bottom: 2px solid black;"  placeholder="First Name" />
+                            <input type="text" id="fName" style="border-bottom: 2px solid black;"  placeholder="First Name" />
                         </div>
                         <div class="loginInput">
-                            <input type="text" name="lName" style="border-bottom: 2px solid black;"  placeholder="Last Name" />
+                            <input type="text" id="lName" style="border-bottom: 2px solid black;"  placeholder="Last Name" />
                         </div>
                         <div class="loginInput">
-                            <input type="text" name="email" style="border-bottom: 2px solid black;"  placeholder="Email Address" />
+                            <input type="text" id="createEmail" style="border-bottom: 2px solid black;"  placeholder="Email Address" />
                         </div>
                         <div class="loginInput">
-                            <input type="password" name="password" style="border-bottom: 2px solid black;"  placeholder="Password" />
+                            <input type="password" id="createPassword" style="border-bottom: 2px solid black;"  placeholder="Password" />
                         </div>
-                        <div class="submitBtn">
+                        <div onclick="spa.createAccount()" class="submitBtn">
                             <a href="#">Sign Up</a>
                         </div>
                     </div>

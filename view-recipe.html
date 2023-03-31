@@ -20,7 +20,7 @@
                     <a href="#BROWSE" class="navBtn">Browse</a>
                     <a href="#CREATE" class="navBtn">Create Recipe</a>
                     <div class="submitBtn" style="width: 7vw !important;margin: 0;">
-                        <a href="#" style="text-align: center !important;font-size: 1vw;">Logout</a>
+                        <a href="#LOGOUT" style="text-align: center !important;font-size: 1vw;">Logout</a>
                     </div>
                     <!-- <a href="#YOURRECIPE" class="navBtn">Create Recipe</a>
                     <a href="#LOGOUT" class="navBtn">Logout</a> -->
@@ -30,7 +30,7 @@
                             <a href="#HOME" class="menuBtn">Home</a>
                             <a href="#BROWSE" class="navBtn">Browse</a>
                             <a href="#CREATE" class="navBtn">Create Recipe</a>
-                            <a href="#LOGIN" class="navBtn">Login</a>
+                            <a href="#LOGOUT" class="navBtn">Logout</a>
                             <!-- <a href="#YOURRECIPE" class="navBtn">Create Recipe</a>
                             <a href="#LOGOUT" class="navBtn">Logout</a> -->
                         </div>
@@ -38,21 +38,51 @@
                 </div>
             </nav>
             <div id="mainContainer">
-                <!-- <div id="orangeOverlay"></div> -->
-                <!-- <div id="banner"> -->
-                    <!-- <div class="yellow-overlay"></div> -->
-                    <div id="bannerArea">
-                    
-                        <img id="aboveBanner" src="assets/images/aboveBanner.png" />
-                        <div id="yellow-overlay"></div>
-                        <img id="homeBanner" src="assets/images/homeBanner.png" />
+                <div id="viewRecipeContainer">
+                    <div id="viewRecipeTopSection">
+                        <div id="viewRecipeImage">
+                            <img src="assets/images/recipes/recipe-pizza.png" />
+                        </div>
+                        <div id="viewRecipeDescription">
+                            <h1>Description</h1>
+                            <div id="viewRecipeDescription-text">
+                                <p>${description}</p>
+                            </div>
+                            <div id="totalTimeSection">
+                                <p>Total Time:</p>
+                                <p>${hours}h ${minutes}min</p>
+                            </div>
+                            <div id="servingsSection">
+                                <p>Servings:</p>
+                                <p>${servings} servings</p>
+                            </div>
+                        </div>
                     </div>
-                <!-- </div> -->
-                
-                
+                    <div id="viewRecipeIngredients">
+                        <h1>Ingredients:</h1>
+                        <ul>
+                            <li>${item1}</li>
+                            <li>${item2}</li>
+                            <li>${item3}</li>
+                            <li>${item4}</li>
+                            <li>${item5}</li>
+                        </ul>
+                    </div>
+                    <div id="viewRecipeInstructions">
+                        <h1>Instructions:</h1>
+                        <ol>
+                            <li>${instruction1}</li>
+                            <li>${instruction2}</li>
+                            <li>${instruction3}</li>
+                            <li>${instruction4}</li>
+                            <li>${instruction5}</li>
+                        </ol>
+                    </div>
+                    <div class="submitBtn editRecipeBtn">
+                        <a href="#">Edit Recipe</a>
+                    </div>
+                </div>
             </div>
-            <!-- <div id="testContainer">
-            </div> -->
         </div>  
     </body>
     <footer>

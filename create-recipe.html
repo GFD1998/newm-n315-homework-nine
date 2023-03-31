@@ -38,36 +38,51 @@
                 </div>
             </nav>
             <div id="mainContainer">
-                <div id="loginCreateAccountContainer">
+                <div id="createRecipeContainer">
                     <div id="loginArea">
-                        <h1>Login Here!</h1>
-                        <div class="loginInput">
-                            <input type="text" name="email" style="border-bottom: 2px solid black;"  placeholder="Email Address" />
+                        <h1>Hey ${username}, create your recipe!</h1>
+                        <div class="recipeInput">
+                            <input type="file" name="recipeImage" style="border-bottom: 2px solid black;"  placeholder="Add Recipe Image" />
                         </div>
-                        <div class="loginInput">
-                            <input type="password" name="password" style="border-bottom: 2px solid black;" placeholder="Password" />
+                        <div class="recipeInput">
+                            <input type="text" name="recipeName" style="border-bottom: 2px solid black;" placeholder="Recipe Name" />
                         </div>
-                        <div class="submitBtn">
-                            <a href="#">Login</a>
+                        <div class="recipeInput">
+                            <input type="text" name="recipeDesc" style="border-bottom: 2px solid black;" placeholder="Recipe Description" />
+                        </div>
+                        <div class="recipeInput">
+                            <input type="text" name="recipeTotalTime" style="border-bottom: 2px solid black;" placeholder="Recipe Total Time" />
+                        </div>
+                        <div class="recipeInput">
+                            <input type="text" name="recipeServingSize" style="border-bottom: 2px solid black;" placeholder="Recipe Serving Size" />
                         </div>
                     </div>
-                    <div id="createAccountArea">
-                        <h1><span id="createAccountCaption">don't have an account?</span><br>Sign Up!</h1>
-                        <div class="loginInput">
-                            <input type="text" name="fName" style="border-bottom: 2px solid black;"  placeholder="First Name" />
+                    <div id="loginArea">
+                        <h1>Enter ingredients:</h1>
+                        <div class="recipeInput">
+                            <input type="text" name="ingredient1" style="border-bottom: 2px solid black;"  placeholder="Ingredient #1" />
                         </div>
-                        <div class="loginInput">
-                            <input type="text" name="lName" style="border-bottom: 2px solid black;"  placeholder="Last Name" />
+                        <div class="recipeInput">
+                            <input type="text" name="ingredient2" style="border-bottom: 2px solid black;"  placeholder="Ingredient #2" />
                         </div>
-                        <div class="loginInput">
-                            <input type="text" name="email" style="border-bottom: 2px solid black;"  placeholder="Email Address" />
+                        <div class="recipeInput">
+                            <input type="text" name="ingredient3" style="border-bottom: 2px solid black;"  placeholder="Ingredient #3" />
                         </div>
-                        <div class="loginInput">
-                            <input type="password" name="password" style="border-bottom: 2px solid black;"  placeholder="Password" />
+                    </div>
+                    <div id="loginArea">
+                        <h1>Enter instructions:</h1>
+                        <div class="recipeInput">
+                            <input type="text" name="instruction1" style="border-bottom: 2px solid black;"  placeholder="Instruction #1" />
                         </div>
-                        <div class="submitBtn">
-                            <a href="#">Sign Up</a>
+                        <div class="recipeInput">
+                            <input type="text" name="instruction2" style="border-bottom: 2px solid black;"  placeholder="Instruction #2" />
                         </div>
+                        <div class="recipeInput">
+                            <input type="text" name="instruction3" style="border-bottom: 2px solid black;"  placeholder="Instruction #3" />
+                        </div>
+                    </div>
+                    <div class="submitBtn" style="width: 8vw !important;margin-bottom: 20rem;background-color: #EFA7A7;">
+                        <a href="#" style="text-align: center !important;font-size: 1vw;">Create Recipe</a>
                     </div>
                 </div>
             </div>

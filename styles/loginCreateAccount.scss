@@ -12,6 +12,12 @@
     align-items: center;
 }
 
+#createRecipeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #loginArea, #createAccountArea{
     margin-right:auto;
     margin-left: auto;
@@ -36,6 +42,25 @@
 }
 
 .loginInput input::placeholder{
+    color: #000;
+
+}
+
+
+.recipeInput{
+    // border-bottom: 2px solid #000;
+    margin-bottom: 5rem;
+}
+
+.recipeInput input{
+    background-color: rgba(0,0,0,0);
+    outline: none !important;
+    border: 0;
+    width: 75vw;
+    font-size: 1.5vw;
+}
+
+.recipeInput input::placeholder{
     color: #000;
 
 }

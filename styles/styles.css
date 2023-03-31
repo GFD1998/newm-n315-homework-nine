@@ -1460,6 +1460,19 @@ textarea {
           align-items: center;
 }
 
+#createRecipeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #loginArea, #createAccountArea {
   margin-right: auto;
   margin-left: auto;
@@ -1504,6 +1517,38 @@ textarea {
 }
 
 .loginInput input::placeholder {
+  color: #000;
+}
+
+.recipeInput {
+  margin-bottom: 5rem;
+}
+
+.recipeInput input {
+  background-color: rgba(0, 0, 0, 0);
+  outline: none !important;
+  border: 0;
+  width: 75vw;
+  font-size: 1.5vw;
+}
+
+.recipeInput input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.recipeInput input::-moz-placeholder {
+  color: #000;
+}
+
+.recipeInput input:-ms-input-placeholder {
+  color: #000;
+}
+
+.recipeInput input::-ms-input-placeholder {
+  color: #000;
+}
+
+.recipeInput input::placeholder {
   color: #000;
 }
 
@@ -1715,6 +1760,100 @@ textarea {
     height: 150%;
     position: absolute;
     z-index: 0;
+  }
+}
+#viewRecipeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  width: 80%;
+  margin-top: 10rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#viewRecipeImage {
+  width: 50%;
+}
+
+#viewRecipeImage img {
+  max-width: 100%;
+}
+
+#viewRecipeDescription {
+  width: 50vw;
+  padding-left: 3rem;
+}
+
+#viewRecipeTopSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#viewRecipeIngredients, #viewRecipeInstructions {
+  margin-left: 2rem;
+}
+
+#viewRecipeIngredients h1, #viewRecipeInstructions h1 {
+  margin-left: -1.3rem;
+}
+
+.editRecipeBtn {
+  margin-bottom: 10rem;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  font-size: 0.1rem !important;
+}
+
+.editRecipeBtn p {
+  font-size: 0.1rem !important;
+}
+
+@media only screen and (max-width: 960px) {
+  #viewRecipeTopSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #viewRecipeIngredients, #viewRecipeInstructions {
+    margin: 0 auto;
+  }
+  #viewRecipeIngredients h1, #viewRecipeInstructions h1 {
+    margin: 0 auto;
   }
 }
 /*

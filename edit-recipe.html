@@ -38,21 +38,54 @@
                 </div>
             </nav>
             <div id="mainContainer">
-                <!-- <div id="orangeOverlay"></div> -->
-                <!-- <div id="banner"> -->
-                    <!-- <div class="yellow-overlay"></div> -->
-                    <div id="bannerArea">
-                    
-                        <img id="aboveBanner" src="assets/images/aboveBanner.png" />
-                        <div id="yellow-overlay"></div>
-                        <img id="homeBanner" src="assets/images/homeBanner.png" />
+                <div id="createRecipeContainer">
+                    <div id="loginArea">
+                        <h1>Hey ${username}, create your recipe!</h1>
+                        <div class="recipeInput">
+                            <input type="file" name="recipeImage" style="border-bottom: 2px solid black;"  placeholder="${recipeImage.name}" />
+                        </div>
+                        <div class="recipeInput">
+                            <input type="text" name="recipeName" style="border-bottom: 2px solid black;" placeholder="Recipe Name" />
+                        </div>
+                        <div class="recipeInput">
+                            <input type="text" name="recipeDesc" style="border-bottom: 2px solid black;" placeholder="Recipe Description" />
+                        </div>
+                        <div class="recipeInput">
+                            <input type="text" name="recipeTotalTime" style="border-bottom: 2px solid black;" placeholder="Recipe Total Time" />
+                        </div>
+                        <div class="recipeInput">
+                            <input type="text" name="recipeServingSize" style="border-bottom: 2px solid black;" placeholder="Recipe Serving Size" />
+                        </div>
                     </div>
-                <!-- </div> -->
-                
-                
+                    <div id="loginArea">
+                        <h1>Enter ingredients:</h1>
+                        <div class="recipeInput">
+                            <input type="text" name="ingredient1" style="border-bottom: 2px solid black;"  placeholder="Ingredient #1" />
+                        </div>
+                        <div class="recipeInput">
+                            <input type="text" name="ingredient2" style="border-bottom: 2px solid black;"  placeholder="Ingredient #2" />
+                        </div>
+                        <div class="recipeInput">
+                            <input type="text" name="ingredient3" style="border-bottom: 2px solid black;"  placeholder="Ingredient #3" />
+                        </div>
+                    </div>
+                    <div id="loginArea">
+                        <h1>Enter instructions:</h1>
+                        <div class="recipeInput">
+                            <input type="text" name="instruction1" style="border-bottom: 2px solid black;"  placeholder="Instruction #1" />
+                        </div>
+                        <div class="recipeInput">
+                            <input type="text" name="instruction2" style="border-bottom: 2px solid black;"  placeholder="Instruction #2" />
+                        </div>
+                        <div class="recipeInput">
+                            <input type="text" name="instruction3" style="border-bottom: 2px solid black;"  placeholder="Instruction #3" />
+                        </div>
+                    </div>
+                    <div class="submitBtn" style="width: 8vw !important;margin-bottom: 20rem;background-color: #EFA7A7;">
+                        <a href="#" style="text-align: center !important;font-size: 1vw;">Create Recipe</a>
+                    </div>
+                </div>
             </div>
-            <!-- <div id="testContainer">
-            </div> -->
         </div>  
     </body>
     <footer>
