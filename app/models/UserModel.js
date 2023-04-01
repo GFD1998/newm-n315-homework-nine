@@ -1,20 +1,91 @@
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-auth.js";
+
 export default class UserModel{
 
+    // userFName = "TestUser";
+    // userLName;
+    // userEmail;
+    user;
+    auth;
+
     constructor(){
-        // $.ajax({url:'index.html',success:  function(data){
-        //     alert(data);
-        // }});
-        fetch('index.html').then(function(res){
-            console.log(res);
-        });
-        console.log("Hello from User.");
+        this.auth = getAuth();
+        this.user = this.auth.currentUser;
+        this.checkForUser();
+        // this.createUser();
+        // this.loginUser("gdennett@codeflamestudio.com", "fineCheese");
     }
-    pageName = "HOME";
 
-    userSettings;
+    checkForUser(){
+        if(this.user){
+          alert("You are already signed in! :)");
+        }else{
+          alert("Please log in or sign up for the full experience! :)");
+        }
+    }
 
 
-    homeContent = `
+    createUser(userEmail, userPassword){
+        console.log("Hello from createUser();");
+        createUserWithEmailAndPassword(this.auth, userEmail, userPassword)
+        .then((userCred) => {
+            console.log(userCred);
+        })
+        .catch((error) =>{
+            console.log(error);
+        });
+    }
+
+    loginUser(userEmail, userPassword){
+        signInWithEmailAndPassword(this.auth, userEmail, userPassword)
+        .then((creds) => {
+            alert("Signed in.");
+            $("#mainContainer").html(this.pm.homeContent);
+            window.location = '';
+        })
+        .catch((error) => {
+            console.log("Login fail.");
+        });
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+homeContent = `
     <div id="gallery">
         <div id="leftArrow" class="arrow">&#8592;</div>
         <div id="galleryContent">
@@ -26,7 +97,7 @@ export default class UserModel{
     `;
 
 
-    detailContent = `
+    browseContent = `
     <div id="gallery">
         <div id="galleryContent">
             <div id="galleryTitle">Monster Hunter Rise</div>
@@ -340,5 +411,5 @@ export default class UserModel{
 
     defaultContent = this.homeContent;
 
-}
 
+*/

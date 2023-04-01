@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang='en' style='background-color: #FFD972;background-size: cover;'>
+    <head>
+        <script src='app/packages/jQuery.js'></script>
+        <meta charset='UTF-8' />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <title style='text-transform: capitalize;'>Main Page</title>
+        <link rel='stylesheet' href='styles/styles.css' />
+    </head>
+    <body>
+        <div class='ssContainer'>
+            <nav>
+                <div id='logo'>
+                    <img id='logoImage' src='assets/images/logo.png' />
+                    <!-- <h2>The Jungle Cook</h2> -->
+                </div>
+                <div id='navLinks'>
+                    <a href='#HOME' class='navBtn'>Home</a>
+                    <a href='#BROWSE' class='navBtn'>Browse</a>
+                    <a href='#CREATE' class='navBtn'>Create Recipe</a>
+                    <div class='submitBtn' style='width: 7vw !important;margin: 0;'>
+                        <a href='#' style='text-align: center !important;font-size: 1vw;'>Login</a>
+                    </div>
+                    <!-- <a href='#YOURRECIPE' class='navBtn'>Create Recipe</a>
+                    <a href='#LOGOUT' class='navBtn'>Logout</a> -->
+                    <img id='hamburger' src='assets/images/hamburgerBtn.png' />
+                    <div id='mainMenu'>
+                        <div style='padding: 1rem;'>
+                            <a href='#HOME' class='menuBtn'>Home</a>
+                            <a href='#BROWSE' class='navBtn'>Browse</a>
+                            <a href='#CREATE' class='navBtn'>Create Recipe</a>
+                            <a href='#YOURRECIPE' class='navBtn'>Your Recipes</a>
+                            <div class='submitBtn' id='login' style='width: 7vw !important;margin: 0;width:fit-content !important;'>
+                                <a href='#LOGIN' style='text-align: center !important;font-size: 1vw;'>Login</a>
+                            </div>
+                            <div class='submitBtn' id='logout' style='width: 7vw !important;margin: 0;width:fit-content !important;'>
+                                <a href='#LOGIN' style='text-align: center !important;font-size: 1vw;'>Logout</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+            <div id='mainContainer'>
+                <div id='loginCreateAccountContainer'>
+                    <div id='loginArea'>
+                        <h1>Login Here!</h1>
+                        <div class='loginInput'>
+                            <input type='text' id='loginEmail' style='border-bottom: 2px solid black;'  placeholder='Email Address' />
+                        </div>
+                        <div class='loginInput'>
+                            <input type='password' id='loginPassword' style='border-bottom: 2px solid black;' placeholder='Password' />
+                        </div>
+                        <div onclick='spa.login()' class='submitBtn'>
+                            <a href='#'>Login</a>
+                        </div>
+                    </div>
+                    <div id='createAccountArea'>
+                        <h1><span id='createAccountCaption'>don't have an account?</span><br>Sign Up!</h1>
+                        <div class='loginInput'>
+                            <input type='text' id='fName' style='border-bottom: 2px solid black;'  placeholder='First Name' />
+                        </div>
+                        <div class='loginInput'>
+                            <input type='text' id='lName' style='border-bottom: 2px solid black;'  placeholder='Last Name' />
+                        </div>
+                        <div class='loginInput'>
+                            <input type='text' id='createEmail' style='border-bottom: 2px solid black;'  placeholder='Email Address' />
+                        </div>
+                        <div class='loginInput'>
+                            <input type='password' id='createPassword' style='border-bottom: 2px solid black;'  placeholder='Password' />
+                        </div>
+                        <div onclick='spa.createAccount()' class='submitBtn'>
+                            <a href='#'>Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </body>
+    <footer>
+        <div id='socials-copyright'>
+            <div id='copyright'>
+                <p id='cpInfo'>
+                    Copyright 2019 The Jungle Cook
+                </p>
+            </div>
+            <div id='socials'>
+                <div>
+                    <img src='assets/images/socials/fbLogo.png' />
+                </div>
+                <div>
+                    <img src='assets/images/socials/instagramLogo.png' />
+                </div> 
+            </div> 
+        </div>
+        <div id='links'>
+            <div>
+                <a href='login.html' id='loginFooter'>
+                    Login
+                </a>
+            </div>
+            <div>
+                <a href='login.html' id='loginFooter'>
+                    Recipes by Category
+                </a>
+            </div> 
+            <div>
+                <a href='login.html' id='loginFooter'>
+                    Privacy and Copyright
+                </a>
+            </div> 
+            <div>
+                <a href='login.html' id='loginFooter'>
+                    Create Recipe
+                </a>
+            </div> 
+            <div>
+                <a href='login.html' id='loginFooter'>
+                    Your Recipes
+                </a>
+            </div>
+        </div>
+    </footer>
+</html>
+<script type='module' src='app/module/app-module.js'></script>
+
+
+

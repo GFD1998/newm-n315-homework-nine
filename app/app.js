@@ -20,32 +20,34 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-auth.js";
-
-const auth = getAuth();
-signInAnonymously(auth)
-.then(() => {
-  // Signed in..
-  console.log("Signed in");
-})
-.catch((error) => {
-  const errorCode = error.code;
-  const errorMessage = error.message;
+// if(user){
+//   console.log("Signed in.");
+// }else{
+//   console.log("Not signed in.");
+// }
+// signInAnonymously(auth)
+// .then(() => {
+//   // Signed in..
+//   console.log("Signed in");
+// })
+// .catch((error) => {
+//   const errorCode = error.code;
+//   const errorMessage = error.message;
   
-  console.log("Not logged in." + errorMessage);
-});
+//   console.log("Not logged in." + errorMessage);
+// });
 
 
 
 
-import UserObjectData from "./data/DB[Recipes]Table[User].json" assert {type: "json"};
-import GalleryManager from "./GalleryManager.js";
+// import UserObjectData from "./data/DB[Recipes]Table[User].json" assert {type: "json"};
+import PageData from "./data/Pages.json" assert {type: "json"};
+import PageManager from "./data/PageManager.js";
+// import GalleryManager from "./GalleryManager.js";
 import SPAManager from "./SPAManager.js";
-import UserModel from "./models/User.js";
+import UserModel from "./models/UserModel.js";
 
-
-var gallery = new GalleryManager(UserObjectData, new UserModel());
-var spa = new SPAManager(new UserModel(), gallery);
+var spa = new SPAManager(new UserModel(), new PageManager(PageData));
 
 
 

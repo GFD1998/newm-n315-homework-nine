@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <script src='app/packages/jQuery.js'></script>
+        <meta charset='UTF-8' />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <title style='text-transform: capitalize;'>Main Page</title>
+        <link rel='stylesheet' href='styles/styles.css' />
+    </head>
+    <body>
+        <div class='ssContainer'>
+            <nav>
+                <div id='logo'>
+                    <img id='logoImage' src='assets/images/logo.png' />
+                    <!-- <h2>The Jungle Cook</h2> -->
+                </div>
+                <div id='navLinks'>
+                    <a href='#HOME' class='navBtn'>Home</a>
+                    <a href='#BROWSE' class='navBtn'>Browse</a>
+                    <a href='#CREATE' class='navBtn'>Create Recipe</a>
+                    <div class='submitBtn' style='width: 7vw !important;margin: 0;'>
+                        <a href='#LOGOUT' style='text-align: center !important;font-size: 1vw;'>Logout</a>
+                    </div>
+                    <!-- <a href='#YOURRECIPE' class='navBtn'>Create Recipe</a>
+                    <a href='#LOGOUT' class='navBtn'>Logout</a> -->
+                    <img id='hamburger' src='assets/images/hamburgerBtn.png' />
+                    <div id='mainMenu'>
+                        <div style='padding: 1rem;'>
+                            <a href='#HOME' class='menuBtn'>Home</a>
+                            <a href='#BROWSE' class='navBtn'>Browse</a>
+                            <a href='#CREATE' class='navBtn'>Create Recipe</a>
+                            <a href='#LOGOUT' class='navBtn'>Logout</a>
+                            <!-- <a href='#YOURRECIPE' class='navBtn'>Create Recipe</a>
+                            <a href='#LOGOUT' class='navBtn'>Logout</a> -->
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+            <div id='mainContainer'>
+                <div id='viewRecipeContainer'>
+                    <div id='viewRecipeTopSection'>
+                        <div id='viewRecipeImage'>
+                            <img src='assets/images/recipes/recipe-pizza.png' />
+                        </div>
+                        <div id='viewRecipeDescription'>
+                            <h1>Description</h1>
+                            <div id='viewRecipeDescription-text'>
+                                <p>${description}</p>
+                            </div>
+                            <div id='totalTimeSection'>
+                                <p>Total Time:</p>
+                                <p>${hours}h ${minutes}min</p>
+                            </div>
+                            <div id='servingsSection'>
+                                <p>Servings:</p>
+                                <p>${servings} servings</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='viewRecipeIngredients'>
+                        <h1>Ingredients:</h1>
+                        <ul>
+                            <li>${item1}</li>
+                            <li>${item2}</li>
+                            <li>${item3}</li>
+                            <li>${item4}</li>
+                            <li>${item5}</li>
+                        </ul>
+                    </div>
+                    <div id='viewRecipeInstructions'>
+                        <h1>Instructions:</h1>
+                        <ol>
+                            <li>${instruction1}</li>
+                            <li>${instruction2}</li>
+                            <li>${instruction3}</li>
+                            <li>${instruction4}</li>
+                            <li>${instruction5}</li>
+                        </ol>
+                    </div>
+                    <div class='submitBtn editRecipeBtn'>
+                        <a href='#'>Edit Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </body>
+    <footer>
+        <div id='socials-copyright'>
+            <div id='copyright'>
+                <p id='cpInfo'>
+                    Copyright 2019 The Jungle Cook
+                </p>
+            </div>
+            <div id='socials'>
+                <div>
+                    <img src='assets/images/socials/fbLogo.png' />
+                </div>
+                <div>
+                    <img src='assets/images/socials/instagramLogo.png' />
+                </div> 
+            </div> 
+        </div>
+        <div id='links'>
+            <div>
+                <a href='login.html' id='loginFooter'>
+                    Login
+                </a>
+            </div>
+            <div>
+                <a href='login.html' id='loginFooter'>
+                    Recipes by Category
+                </a>
+            </div> 
+            <div>
+                <a href='login.html' id='loginFooter'>
+                    Privacy and Copyright
+                </a>
+            </div> 
+            <div>
+                <a href='login.html' id='loginFooter'>
+                    Create Recipe
+                </a>
+            </div> 
+            <div>
+                <a href='login.html' id='loginFooter'>
+                    Your Recipes
+                </a>
+            </div>
+        </div>
+    </footer>
+</html>
+<script type='module' src='app/module/app-module.js'></script>
+
+
+
