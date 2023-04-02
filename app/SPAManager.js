@@ -50,7 +50,7 @@ export default class SPAManager{
         let lName = $("#lName").val();
         let email = $("#createEmail").val();
         let password = $("#createPassword").val();
-        this.um.createNewAccount(fName, lName, email, password);
+        this.um.createUser(fName, lName, email, password);
     }
 
     login(){
@@ -64,7 +64,7 @@ export default class SPAManager{
     }
 
     checkUser(){
-        
+        this.um.checkForUser();
     }
 
 
@@ -127,8 +127,15 @@ export default class SPAManager{
             case "#LOGIN":
                 this.loginCreateAccountContent();
                 break;
+            case "#LOGIN-USER":
+                this.login();
+                break;
             case "#LOGOUT":
                 this.logout();
+                break;
+            case "#SIGNUP-USER":
+                this.createAccount();
+                break;
             default:
                 break;
         }

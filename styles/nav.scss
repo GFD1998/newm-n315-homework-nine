@@ -21,6 +21,9 @@
         flex-direction: row;
     }
 
+    #login, #logout{
+        display: none;
+    }
     #iconsGroup1{
         display: flex;
         flex-direction: row;

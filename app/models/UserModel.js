@@ -18,21 +18,28 @@ export default class UserModel{
 
     checkForUser(){
         if(this.user){
-          alert("You are already signed in! :)");
+            alert("You are already signed in! :)");
+            $("#login").css("display", "none");
+            $("#logout").css("display", "block");
         }else{
-          alert("Please log in or sign up for the full experience! :)");
+            alert("Please log in or sign up for the full experience! :)");
+            $("#login").css("display", "block");
+            $("#logout").css("display", "none");
         }
     }
 
 
-    createUser(userEmail, userPassword){
+    createUser(userFName, userLName, userEmail, userPassword){
         console.log("Hello from createUser();");
         createUserWithEmailAndPassword(this.auth, userEmail, userPassword)
         .then((userCred) => {
             console.log(userCred);
+            window.location.hash = 'HOME';
         })
         .catch((error) =>{
             console.log(error);
+            window.location.hash = 'LOGIN';
+            alert("One of the parameters you entered did not verify. Please try again.");
         });
     }
 
@@ -40,11 +47,18 @@ export default class UserModel{
         signInWithEmailAndPassword(this.auth, userEmail, userPassword)
         .then((creds) => {
             alert("Signed in.");
-            $("#mainContainer").html(this.pm.homeContent);
-            window.location = '';
+            $("#login").css("display", "none");
+            $("#logout").css("display", "block");
+            // this.user = this.auth.currentUser;
+            // $("#mainContainer").html(this.pm.homeContent);
+            window.location.hash = 'YOURRECIPE';
         })
         .catch((error) => {
             console.log("Login fail.");
+            $("#logout").css("display", "block");
+            $("#login").css("display", "none");
+            window.location.hash = 'LOGIN';
+            alert("Your email or password was incorrect. Please try again.");
         });
     }
 }
