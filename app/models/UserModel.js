@@ -1,4 +1,6 @@
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword , signOut } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-auth.js";
+
+import { collection, doc, getDocs, setDoc, addDoc} from 'https://www.gstatic.com/firebasejs/9.19.0/firebase-firestore.js';
 
 export default class UserModel{
 
@@ -7,25 +9,100 @@ export default class UserModel{
     // userEmail;
     user;
     auth;
+    db;
+    userTable;
 
-    constructor(){
+
+    constructor(db){
         this.auth = getAuth();
-        this.user = this.auth.currentUser;
+        this.db = db;
+        this.userTable = collection(this.db, "User");
+        // var ref = collection(this.db, "User");
+        // this.pullDBData();
+        // if(this.user.exists()){
+        //     console.log(this.user.data());
+        // }else{
+        //     console.log("No data yet.")
+        // }
+
+        this.testing();
         this.checkForUser();
         // this.createUser();
         // this.loginUser("gdennett@codeflamestudio.com", "fineCheese");
     }
 
+    async pullDBData(loginEmail){
+        var ref = collection(this.db, "User");
+        var snap = await getDocs(ref);
+        var i = 0, d = 0;
+        console.log(snap);
+        while(i < snap._snapshot.docChanges.length - 1 && d == 0){
+            if(snap._snapshot.docChanges[i].doc.data.value.mapValue.fields.email.stringValue.toLowerCase() != loginEmail){
+                console.log(loginEmail + " | " + snap._snapshot.docChanges[i].doc.data.value.mapValue.fields.email.stringValue.toLowerCase());
+                i++;
+            }else{
+                 d = 1;
+            }
+        }
+
+        console.log(snap._snapshot.docChanges[i].doc.data.value.mapValue.fields.email.stringValue);
+
+        // console.log(snap._snapshot.docChanges[i].doc.data.value.mapValue.fields.email.stringValue);
+        // if(snap.exists()){
+        //     console.log(snap);
+        //     return snap;
+        // }else{
+        //     console.log("No data yet.");
+        // }
+
+        // this.setUserDBInfo();
+
+    }
+
     checkForUser(){
         if(this.user){
-            alert("You are already signed in! :)");
+            // alert("You are already signed in! :)");
             $("#login").css("display", "none");
             $("#logout").css("display", "block");
         }else{
-            alert("Please log in or sign up for the full experience! :)");
+            if(window.location.hash == ''){
+                // alert("Please log in or sign up for the full experience! :)");
+            }
             $("#login").css("display", "block");
             $("#logout").css("display", "none");
         }
+    }
+
+    async setUserDBInfo(ufn, uln, ue, up){
+        console.log(this.userTable);
+        await addDoc(collection(this.db, "User"), {
+            first_name: ufn,
+            last_name: uln,
+            email: ue,
+            password: up
+            // fName: "test",
+            // lName: "user",
+            // email: "testuser@email.com",
+            // password: "rooter"
+        })
+        .then((ref) => {
+            console.log(ref.uid);
+        });
+
+        // console.log(ref);
+
+
+        // const ref = await addDoc(collection(this.db, this.userTable), {
+        //     first_name: ufn,
+        //     last_name: uln,
+        //     email: ue,
+        //     password: up
+        //     // fName: "test",
+        //     // lName: "user",
+        //     // email: "testuser@email.com",
+        //     // password: "rooter"
+        // });
+        // console.log(ref.id);
     }
 
 
@@ -33,8 +110,9 @@ export default class UserModel{
         console.log("Hello from createUser();");
         createUserWithEmailAndPassword(this.auth, userEmail, userPassword)
         .then((userCred) => {
-            console.log(userCred);
-            window.location.hash = 'HOME';
+            // console.log(userCred.user.accessToken);
+            this.setUserDBInfo(userFName, userLName, userEmail, userPassword);
+            // this.loginUser(userCred);
         })
         .catch((error) =>{
             console.log(error);
@@ -47,9 +125,10 @@ export default class UserModel{
         signInWithEmailAndPassword(this.auth, userEmail, userPassword)
         .then((creds) => {
             alert("Signed in.");
+            console.log(creds.user.email);
             $("#login").css("display", "none");
             $("#logout").css("display", "block");
-            // this.user = this.auth.currentUser;
+            this.user = this.pullDBData(creds.user.email);
             // $("#mainContainer").html(this.pm.homeContent);
             window.location.hash = 'YOURRECIPE';
         })
@@ -60,6 +139,19 @@ export default class UserModel{
             window.location.hash = 'LOGIN';
             alert("Your email or password was incorrect. Please try again.");
         });
+    }
+
+    logoutUser(){
+        this.auth.signOut().then(() => console.log('User signed out!'));
+        $("#login").css("display", "none");
+        $("#logout").css("display", "block");
+        window.location.hash = 'HOME';
+    }
+
+    testing(){
+        console.log("Database: " + this.db);
+        console.log("User: " + this.user);
+        console.log("Auth: " + this.auth);
     }
 }
 
@@ -331,31 +423,31 @@ homeContent = `
     loginSignupContent = `
     <div id="loginSignupContainer">
             <div class="inputForm">
-    
+
                 <form id="loginForm" action="./server/processlogin.php" method="POST">
-    
+
                     <h1>Login</h1><br>
-    
+
                     <div id="dataPoint">
-    
+
                         <p>Email</p>
-    
+
                         <input type="text" name="loginemail" required>
-    
+
                     </div>
-    
+
                     <div id="dataPoint">
-    
+
                         <p>Password</p>
-    
+
                         <input type="text" name="loginpasswd" required><br><br>
-    
+
                     </div>
-    
+
                     <br>
-    
+
                     <button class="btnstyle submitbtn" type="submit" style="padding-top: 5px; cursor: pointer;" required>Log in</button>
-    
+
                 </form>
             </div>
             <div class="inputForm">
@@ -421,7 +513,7 @@ homeContent = `
         </div>
     `;
 
-    
+
 
     defaultContent = this.homeContent;
 

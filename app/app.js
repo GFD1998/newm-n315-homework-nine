@@ -1,5 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-app.js";
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js';
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -18,6 +19,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const dbConnection = getFirestore(app);
 const analytics = getAnalytics(app);
 
 // if(user){
@@ -47,7 +49,7 @@ import PageManager from "./data/PageManager.js";
 import SPAManager from "./SPAManager.js";
 import UserModel from "./models/UserModel.js";
 
-var spa = new SPAManager(new UserModel(), new PageManager(PageData));
+var spa = new SPAManager(new UserModel(dbConnection), new PageManager(PageData));
 
 
 

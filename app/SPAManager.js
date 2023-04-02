@@ -65,6 +65,7 @@ export default class SPAManager{
 
     checkUser(){
         this.um.checkForUser();
+        $("#userFNameTitle").html(this.um.user.fName);
     }
 
 
@@ -117,6 +118,7 @@ export default class SPAManager{
                 break;
             case "#CREATE":
                 this.createRecipesContent();
+                this.um.testing();
                 break;
             case "#YOURRECIPE":
                 this.yourRecipesContent();
